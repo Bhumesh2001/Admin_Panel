@@ -1,11 +1,11 @@
 body {
-  font-family: Arial, sans-serif;
-  background-color: #343a40;
-} 
+  font-family: "Montserrat", sans-serif;
+  background-color: #f8f9fa;
+}
 .sidebar {
   height: 100vh;
-  background: #212529;
-  padding: 20px;
+  background: #0d1b2a;
+  padding: 15px 20px 15px 20px;
   transition: transform 0.3s ease;
   position: fixed;
   top: 0;
@@ -24,61 +24,61 @@ body {
   transition: background 0.3s;
 }
 .sidebar a:hover {
-  background: #343a40;
-  color: red;
-}
-.text-admin{
-  color: red;
-  font-weight: bold;
-}
-.main-content {
-  /* padding: 20px; */
-  margin-left: 250px; /* Adjust margin to accommodate sidebar */
-}
-.card {
-  margin-bottom: 20px;
-  border: none;
-}
-
-.card-body{
-  background-color: #212529;
-  color: #ffecd1;
+  background: #ef233c;
+  color: white;
   border-radius: 5px;
 }
-.card-title {
-  font-size: 1.5rem;
+
+.sidebar .sidebar-link.active {
+  background: #ef233c;
+  color: white;
+  border-radius: 5px;
 }
 
-.card-text{
+/* dashbord style */
+
+.text-admin {
+  color: white;
   font-weight: bold;
+  margin-bottom: 12px;
+}
+.main-content {
+  margin-left: 250px; /* Adjust margin to accommodate sidebar */
+}
+#dashboard {
+  padding: 20px; /* Padding for the dashboard */
 }
 
-.users{
-  color: #fc0800;
+.dashboard-card {
+  border-radius: 15px; /* Rounded corners for cards */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+  transition: transform 0.2s; /* Smooth transition */
 }
-.videos{
-  color: #e5f30c;
+
+.dashboard-card:hover {
+  transform: scale(1.05); /* Scale effect on hover */
+  cursor: pointer;
 }
-.categories{
-  color: #007bff;
+
+.card-title {
+  display: flex;
+  align-items: center; /* Center icon and text vertically */
 }
-.likes{
-  color: #12db52;
+
+.card-title i {
+  font-size: 24px; /* Icon size */
+  margin-right: 10px; /* Space between icon and text */
+  color: #ef233c; /* Icon color */
 }
-.comments{
-  color: #e50cf3;
+
+.card-text {
+  font-size: 2rem; /* Larger text for numbers */
+  font-weight: bold; /* Bold text */
+  color: #343a40; /* Dark color for text */
 }
-.shares{
-  color: #18b5a6;
-}
-.others{
-  color: #ff3e7e;
-}
-.subscribers{
-  color: #ff7626;
-}
-.amount{
-  color: #00b4d8;
+
+h3 {
+  color: #343a40; /* Dark color for heading */
 }
 
 /* Media query for mobile devices */
@@ -98,6 +98,8 @@ body {
   }
 }
 
+/* navbar style */
+
 .navbar-toggler {
   padding: 0.25rem 0.5rem;
   font-size: 0.75rem;
@@ -106,93 +108,209 @@ body {
   width: 1.5rem;
   height: 1.5rem;
 }
-
-.sidebar .sidebar-link.active {
-  background: #343a40;
-  color: red;
-}
-
 .navbar {
-  background-color: #212529;
+  background-color: #0d1b2a;
   padding: 12px 0px 12px 0px;
 }
 
 /* video style */
-
-.custom-form {
-  background-color: #212529; /* Darker form background */
+.upload-video {
+  background-color: #ffffff; /* White background color */
+  border-radius: 10px;
   padding: 30px;
-  border-radius: 15px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  width: 100%;
-  max-width: 600px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  width: 1150px;
 }
 
-.form-label {
+.upload-video h3 {
   font-weight: bold;
-  color: #e0fbfc; /* Light text color */
+  margin-bottom: 20px;
 }
 
-.form-control {
-  background-color: #343a40; /* Darker input background */
-  border: none;
-  color: #e0fbfc; /* Light text color */
-  padding: 12px;
-  border-radius: 10px;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.form-control:focus {
-  background-color: #495057; /* Slightly lighter background on focus */
-  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
-  border: none;
-  color: #ffffff; /* White text color on focus */
-}
-
-.form-control::placeholder {
-  color: rgba(
-    255,
-    255,
-    255,
-    0.7
-  ); /* Semi-transparent white placeholder */
-}
-
-.form-control:focus::placeholder {
-  color: rgba(255, 255, 255, 0.5); /* More transparent on focus */
-}
-
-.form-select option {
-  background-color: #343a40; /* Dark background for dropdown options */
-  color: #e0fbfc; /* Light text color for dropdown options */
-}
-
-#videoCategory {
-  background-color: #343a40;
-  color: #e0fbfc;
-  border: none;
-}
-#videoCategory:focus {
-  background-color: #495057; /* Slightly lighter background on focus */
-  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
-  border: none;
-  color: #ffffff; /* White text color on focus */
-}
-
-.video_btn {
-  /* background-color: #ffba08;  */
-  border: none;
+.or{
   font-weight: bold;
-  padding: 10px 20px;
-  border-radius: 10px;
-  transition: background-color 0.3s ease;
-  width: 100%;
+  
 }
 
-.video_btn:hover {
-  background-color: #faa307; /* Darker yellow on hover */
+.form-control,
+.form-select {
+  background-color: #f8f9fa; /* Light input background */
+  border: 1px solid #ced4da; /* Light border */
+  color: #495057; /* Dark input text color */
+}
+
+.form-control:focus,
+.form-select:focus {
+  background-color: #f8f9fa; /* Keep same background on focus */
+  border-color: #ef233c; /* Blue border on focus */
+  box-shadow: none; /* Remove default focus shadow */
+}
+
+.btn-primary {
+  background-color: #ef233c; /* Blue button */
+  border-color: #ef233c; /* Blue button border */
+}
+
+.btn-primary:hover {
+  background-color: #d90429; /* Darker blue on hover */
+  border-color: #d90429; /* Darker border on hover */
 }
 
 .form-text {
-  color: #adb5bd; /* Light gray for helper text */
+  color: #6c757d; /* Gray for helper text */
+}
+
+@media (max-width: 767px) {
+  .upload-video {
+    padding: 20px;
+  }
+}
+
+/* dropdown style  */
+
+.dropdown-toggle::after {
+  float: right;
+  margin-top: 10px;
+}
+.custom-select {
+  background-color: #ffffff; /* White background for select */
+  border: 1px solid #ced4da; /* Light border */
+  border-radius: 6px; /* Rounded corners */
+  padding: 8px 10px 8px 10px; /* Padding for select */
+  transition: border-color 0.3s; /* Smooth transition */
+  width: 100%;
+}
+
+.dropdown-toggle:hover,.dropdown-toggle:focus{
+  background-color: #f8f9fa;
+  color: #6c757d;
+}
+
+.custom-select:focus {
+  border-color: #ef233c; /* Blue border on focus */
+  box-shadow: none; /* Remove default focus shadow */
+}
+
+.form-label {
+  font-weight: bold; /* Bold labels */
+  color: #343a40; /* Dark text color */
+}
+
+.dropdown-item {
+  display: flex; /* Flex display for icon and text */
+  align-items: center; /* Center items vertically */
+  padding: 10px 15px; /* Padding for dropdown items */
+}
+
+.dropdown-item i {
+  margin-right: 10px; /* Space between icon and text */
+  color: #ef233c; /* Icon color */
+  font-size: 16px; /* Smaller icon size */
+}
+
+.dropdown-item:hover {
+  background-color: #e9ecef; /* Light gray background on hover */
+}
+
+/* Scrollable dropdown */
+.dropdown-menu {
+  max-height: 300px; /* Set maximum height */
+  overflow-y: auto; /* Enable vertical scrolling */
+  overflow-x: hidden; /* Disable horizontal scrolling */
+  width: 100%;
+}
+
+/* other/story */
+.article {
+  width: 1150px;
+}
+.article h3 {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.content {
+  padding: 20px; /* Padding for content */
+}
+
+.story-card {
+  background-color: #ffffff; /* White card background */
+  border: none; /* Remove border */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+  padding: 30px;
+}
+
+.form-label {
+  font-weight: bold; /* Bold labels */
+}
+
+/* terms & condition style*/
+.m-heading {
+  font-size: 30px;
+  color: #d90429;
+  font-weight: bold;
+}
+.TC-heading,
+h3 {
+  color: #ef233c;
+  font-size: 23px;
+  font-weight: bold;
+}
+#terms-conditions {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  width: 1150px;
+  line-height: 1.6;
+}
+ul {
+  margin-left: 20px;
+}
+a {
+  color: #0056b3;
+  text-decoration: none;
+}
+
+/* logout style */
+
+#logout {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80vh; /* Full height */
+  text-align: center; /* Center text */
+}
+
+#logout h3 {
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #ef233c; /* Blue color for heading */
+}
+
+#logout p {
+  line-height: 1.6; /* Improved line height for readability */
+  margin-bottom: 30px; /* Space below paragraph */
+  color: black; /* Light gray for paragraph text */
+}
+
+.logout-btn {
+  background-color: #ef233c; /* Button background color */
+  border-color: #ef233c; /* Button border color */
+  padding: 10px 20px; /* Padding for the button */
+  font-weight: bold; /* Bold text for button */
+  transition: background-color 0.3s, border-color 0.3s; /* Smooth transition */
+}
+
+.logout-btn:hover {
+  background-color: #d90429; /* Darker blue on hover */
+  border-color: #d90429; /* Darker border on hover */
+}
+
+.logout-icon {
+  font-size: 60px; /* Size of the logout icon */
+  color: #ef233c; /* Color of the icon */
+  margin-bottom: 20px; /* Space below the icon */
 }
