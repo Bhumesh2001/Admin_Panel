@@ -10,10 +10,11 @@
     />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     />
-    <link rel="icon" href="logo.jpg" type="image/x-icon">
-    <link rel="stylesheet" href="style.css" />
+
+    <link rel="icon" href="/logo/logo.jpg" type="image/x-icon" />
+    <link rel="stylesheet" href="/css/style.css" />
   </head>
   <body>
     <!-- Sidebar -->
@@ -38,7 +39,7 @@
         href="#"
         class="nav-link sidebar-link"
         data-target="#others-story"
-        ><i class="fas fa-book"></i> Others/Story</a
+        ><i class="fas fa-book"></i> Article</a
       >
       <a
         draggable="false"
@@ -76,7 +77,6 @@
         ><i class="fas fa-sign-out-alt"></i> Logout</a
       >
     </div>
-
     <!-- Main Content -->
     <div class="main-content flex-grow-1">
       <nav class="navbar navbar-expand-lg sticky-top">
@@ -119,32 +119,40 @@
           </div>
         </div>
       </nav>
-      <div class="container mt-3 px-4">
-        <div id="content">
-          <div id="dashboard">
-            <h3 class="text-white mb-3">Dashboard</h3>
-            <!-- Dashboard Stats -->
+      <div class="container">
+        <div
+          id="content"
+          class="d-flex justify-content-center align-items-center"
+        >
+          <div id="dashboard" class="w-100">
+            <h3 class="text-dark mt-1 mb-3">Dashboard</h3>
             <div class="row">
-              <div class="col-md-4">
-                <div class="card">
+              <div class="col-md-4 mb-3">
+                <div class="card dashboard-card">
                   <div class="card-body">
-                    <h5 class="card-title">Total Users</h5>
+                    <h5 class="card-title">
+                      <i class="fas fa-users"></i> Total Users
+                    </h5>
                     <h4 class="card-text users">1500</h4>
                   </div>
                 </div>
               </div>
-              <div class="col-md-4">
-                <div class="card">
+              <div class="col-md-4 mb-3">
+                <div class="card dashboard-card">
                   <div class="card-body">
-                    <h5 class="card-title">Total Videos</h5>
+                    <h5 class="card-title">
+                      <i class="fas fa-video"></i> Total Videos
+                    </h5>
                     <h4 class="card-text videos">300</h4>
                   </div>
                 </div>
               </div>
-              <div class="col-md-4">
-                <div class="card">
+              <div class="col-md-4 mb-3">
+                <div class="card dashboard-card">
                   <div class="card-body">
-                    <h5 class="card-title">Total Categories</h5>
+                    <h5 class="card-title">
+                      <i class="fas fa-th-list"></i> Total Categories
+                    </h5>
                     <h4 class="card-text categories">200</h4>
                   </div>
                 </div>
@@ -152,26 +160,32 @@
             </div>
 
             <div class="row">
-              <div class="col-md-4">
-                <div class="card">
+              <div class="col-md-4 mb-3">
+                <div class="card dashboard-card">
                   <div class="card-body">
-                    <h5 class="card-title">Total Likes</h5>
+                    <h5 class="card-title">
+                      <i class="fas fa-thumbs-up"></i> Total Likes
+                    </h5>
                     <h4 class="card-text likes">2500</h4>
                   </div>
                 </div>
               </div>
-              <div class="col-md-4">
-                <div class="card">
+              <div class="col-md-4 mb-3">
+                <div class="card dashboard-card">
                   <div class="card-body">
-                    <h5 class="card-title">Total Comments</h5>
+                    <h5 class="card-title">
+                      <i class="fas fa-comments"></i> Total Comments
+                    </h5>
                     <h4 class="card-text comments">125</h4>
                   </div>
                 </div>
               </div>
-              <div class="col-md-4">
-                <div class="card">
+              <div class="col-md-4 mb-3">
+                <div class="card dashboard-card">
                   <div class="card-body">
-                    <h5 class="card-title">Total Shares</h5>
+                    <h5 class="card-title">
+                      <i class="fas fa-share-alt"></i> Total Shares
+                    </h5>
                     <h4 class="card-text shares">750</h4>
                   </div>
                 </div>
@@ -179,26 +193,32 @@
             </div>
 
             <div class="row">
-              <div class="col-md-4">
-                <div class="card">
+              <div class="col-md-4 mb-3">
+                <div class="card dashboard-card">
                   <div class="card-body">
-                    <h5 class="card-title">Total Others</h5>
+                    <h5 class="card-title">
+                      <i class="fas fa-ellipsis-h"></i> Total Others
+                    </h5>
                     <h4 class="card-text others">300</h4>
                   </div>
                 </div>
               </div>
-              <div class="col-md-4">
-                <div class="card">
+              <div class="col-md-4 mb-3">
+                <div class="card dashboard-card">
                   <div class="card-body">
-                    <h5 class="card-title">Total Subscribers</h5>
+                    <h5 class="card-title">
+                      <i class="fas fa-user-plus"></i> Total Subscribers
+                    </h5>
                     <h4 class="card-text subscribers">500</h4>
                   </div>
                 </div>
               </div>
-              <div class="col-md-4">
-                <div class="card">
+              <div class="col-md-4 mb-3">
+                <div class="card dashboard-card">
                   <div class="card-body">
-                    <h5 class="card-title">Total Amount</h5>
+                    <h5 class="card-title">
+                      <i class="fas fa-dollar-sign"></i> Total Amount
+                    </h5>
                     <h4 class="card-text amount">$1000</h4>
                   </div>
                 </div>
@@ -206,10 +226,8 @@
             </div>
           </div>
 
-          <div
-            id="upload-video"
-            class="upload-video d-none d-flex justify-content-center align-items-center"
-          >
+          <div id="upload-video" class="d-none text-dark upload-video my-3">
+            <h3>Upload Video</h3>
             <form class="custom-form" id="video-form">
               <div class="mb-3">
                 <label for="videoTitle" class="form-label">Title</label>
@@ -240,21 +258,186 @@
                 <label for="videoCategory" class="form-label"
                   >Select Category</label
                 >
-                <select class="form-select" id="videoCategory" required>
-                  <option value="">Choose a category</option>
-                  <option value="education">Free Series</option>
-                  <option value="education">Share Market</option>
-                  <option value="education">Education</option>
-                  <option value="education">Adhaar Card</option>
-                  <option value="entertainment">Driving Licence</option>
-                  <option value="technology">Pan Card</option>
-                  <option value="music">Sarkari Kaam</option>
-                  <option value="sports">Business</option>
-                  <option value="education">Others</option>
-                  <option value="education">Admission series</option>
-                  <option value="education">Youtube</option>
-                  <option value="education">Mobile tricks</option>
-                </select>
+                <div class="dropdown">
+                  <button
+                    class="btn btn-outline-secondary dropdown-toggle custom-select"
+                    type="button"
+                    id="dropdownMenuButton"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    <span class="float-start" id="category-span"
+                      >Choose a category</span
+                    >
+                  </button>
+                  <ul
+                    class="dropdown-menu"
+                    aria-labelledby="dropdownMenuButton"
+                  >
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="#"
+                        onclick="selectService('Aadhaar Service')"
+                        ><i class="fas fa-id-card"></i>Aadhaar Service</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="#"
+                        onclick="selectService('PAN Card Service')"
+                        ><i class="fas fa-id-card-alt"></i>PAN Card Service</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="#"
+                        onclick="selectService('Voter Card Service')"
+                        ><i class="fas fa-id-card"></i>Voter Card Service</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="#"
+                        onclick="selectService('UP Pension')"
+                        ><i class="fas fa-user-graduate"></i>UP Pension</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="#"
+                        onclick="selectService('PF (EPFO)')"
+                        ><i class="fas fa-building"></i>PF (EPFO)</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="#"
+                        onclick="selectService('ITR Filing')"
+                        ><i class="fas fa-file-invoice"></i>ITR Filing</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="#"
+                        onclick="selectService('Udyog Adhar (MSME)')"
+                        ><i class="fas fa-industry"></i>Udyog Adhar (MSME)</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="#"
+                        onclick="selectService('PM Kisan Samman Nidhi')"
+                        ><i class="fas fa-hand-holding-usd"></i>PM Kisan Samman
+                        Nidhi</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="#"
+                        onclick="selectService('DL Service')"
+                        ><i class="fas fa-car"></i>DL Service</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="#"
+                        onclick="selectService('Parivahan Seva')"
+                        ><i class="fas fa-road"></i>Parivahan Seva</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="#"
+                        onclick="selectService('UP Police Service')"
+                        ><i class="fas fa-shield-alt"></i>UP Police Service</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="#"
+                        onclick="selectService('Passport Service')"
+                        ><i class="fas fa-passport"></i>Passport Service</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="#"
+                        onclick="selectService('E District UP')"
+                        ><i class="fas fa-desktop"></i>E District UP</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="#"
+                        onclick="selectService('CSC Service')"
+                        ><i class="fas fa-laptop"></i>CSC Service</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="#"
+                        onclick="selectService('File Converter')"
+                        ><i class="fas fa-file-upload"></i>File Converter</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="#"
+                        onclick="selectService('UP Labour Card Service')"
+                        ><i class="fas fa-user-tie"></i>UP Labour Card
+                        Service</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="#"
+                        onclick="selectService('E Shram Card Service')"
+                        ><i class="fas fa-id-badge"></i>E Shram Card Service</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="#"
+                        onclick="selectService('Photoshop')"
+                        ><i class="fas fa-image"></i>Photoshop</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="#"
+                        onclick="selectService('MS Word')"
+                        ><i class="fas fa-file-word"></i>MS Word</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="#"
+                        onclick="selectService('Excel')"
+                        ><i class="fas fa-file-excel"></i>Excel</a
+                      >
+                    </li>
+                  </ul>
+                </div>
               </div>
               <div class="mb-3">
                 <label for="videoUpload" class="form-label">Upload Video</label>
@@ -268,6 +451,7 @@
                   >Choose a video file or enter a video URL below.</small
                 >
               </div>
+              <p class="or">Or</p>
               <div class="mb-3">
                 <label for="videoUrl" class="form-label">Video URL</label>
                 <input
@@ -279,45 +463,217 @@
                 />
               </div>
               <button type="submit" class="btn btn-primary video_btn">
-                Submit
+                Upload
               </button>
             </form>
           </div>
 
-          <div id="others-story" class="d-none text-white">
-            <h3>Others/Story</h3>
-            <p>Share your stories or other content here.</p>
+          <div id="others-story" class="d-none text-dark article my-3">
+            <div class="card story-card">
+              <h3>Add New Article</h3>
+              <form>
+                <div class="mb-3">
+                  <label for="articleTitle" class="form-label">Title</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="articleTitle"
+                    placeholder="Enter article title"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="articleAuthor" class="form-label"
+                    >Author Name</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="articleAuthor"
+                    placeholder="Enter author's name"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="articleDate" class="form-label"
+                    >Publication Date</label
+                  >
+                  <input
+                    type="date"
+                    class="form-control"
+                    id="articleDate"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="articleContent" class="form-label">Content</label>
+                  <textarea
+                    class="form-control"
+                    id="articleContent"
+                    rows="5"
+                    placeholder="Write your article content here..."
+                    required
+                  ></textarea>
+                </div>
+                <div class="mb-3">
+                  <label for="articleImage" class="form-label"
+                    >Upload Image</label
+                  >
+                  <input
+                    type="file"
+                    class="form-control"
+                    id="articleImage"
+                    accept="image/*"
+                    required
+                  />
+                  <small class="form-text text-muted"
+                    >Upload an image related to the article.</small
+                  >
+                </div>
+                <button type="submit" class="btn btn-primary">
+                  Add Article
+                </button>
+              </form>
+            </div>
           </div>
 
-          <div id="users" class="d-none text-white">
+          <div id="users" class="d-none text-dark">
             <h3>Users</h3>
             <p>Manage your users here.</p>
           </div>
 
-          <div id="settings" class="d-none text-white">
+          <div id="settings" class="d-none text-dark">
             <h3>Settings</h3>
             <p>Configure your application settings here.</p>
           </div>
 
-          <div id="terms-conditions" class="d-none text-white">
-            <h3>Terms & Conditions</h3>
-            <p>Review and manage terms & conditions here.</p>
+          <div id="terms-conditions" class="d-none text-dark my-3">
+            <h1 class="m-heading">Terms and Conditions</h1>
+            <p>
+              Welcome to [Your Company Name]! These terms and conditions outline
+              the rules and regulations for the use of [Your Company Name]'s
+              Website, located at [Website URL].
+            </p>
+
+            <h2 class="TC-heading">1. Introduction</h2>
+            <p>
+              By accessing this website, we assume you accept these terms and
+              conditions. Do not continue to use [Website Name] if you do not
+              agree to all of the terms and conditions stated on this page.
+            </p>
+
+            <h2 class="TC-heading">2. License</h2>
+            <p>
+              Unless otherwise stated, [Your Company Name] and/or its licensors
+              own the intellectual property rights for all material on [Website
+              Name]. All intellectual property rights are reserved. You may
+              access this from [Website Name] for your own personal use
+              subjected to restrictions set in these terms and conditions.
+            </p>
+
+            <h2 class="TC-heading">3. User Content</h2>
+            <p>
+              You are responsible for the content you upload, share, or post on
+              our platform. By submitting content to our website, you grant us a
+              worldwide, non-exclusive, royalty-free license to use, reproduce,
+              and distribute such content in connection with the website.
+            </p>
+
+            <h2 class="TC-heading">4. Content Policy</h2>
+            <p>
+              We strive to create a safe and positive environment for all users.
+              The following types of content are strictly prohibited:
+            </p>
+            <ul>
+              <li>Hate speech, harassment, or content promoting violence.</li>
+              <li>Obscene, pornographic, or sexually explicit material.</li>
+              <li>
+                Content that infringes on the intellectual property rights of
+                others.
+              </li>
+              <li>Misleading or false information.</li>
+              <li>
+                Malicious software, phishing, or any content that poses a
+                security threat.
+              </li>
+            </ul>
+            <p>
+              We reserve the right to remove any content that violates these
+              policies and to terminate the accounts of users who repeatedly
+              breach these terms.
+            </p>
+
+            <h2 class="TC-heading">5. Termination</h2>
+            <p>
+              We may terminate or suspend your account and bar access to the
+              Service immediately, without prior notice or liability, under our
+              sole discretion, for any reason whatsoever and without limitation,
+              including but not limited to a breach of the Terms.
+            </p>
+
+            <h2 class="TC-heading">6. Limitation of Liability</h2>
+            <p>
+              In no event shall [Your Company Name], nor its directors,
+              employees, partners, agents, suppliers, or affiliates, be liable
+              for any indirect, incidental, special, consequential, or punitive
+              damages, including without limitation, loss of profits, data, use,
+              goodwill, or other intangible losses, resulting from (i) your
+              access to or use of or inability to access or use the Service;
+              (ii) any conduct or content of any third party on the Service;
+              (iii) any content obtained from the Service; and (iv) unauthorized
+              access, use, or alteration of your transmissions or content.
+            </p>
+
+            <h2 class="TC-heading">7. Governing Law</h2>
+            <p>
+              These Terms shall be governed and construed in accordance with the
+              laws of [Your Country], without regard to its conflict of law
+              provisions.
+            </p>
+
+            <h2 class="TC-heading">8. Changes to These Terms</h2>
+            <p>
+              We reserve the right, at our sole discretion, to modify or replace
+              these Terms at any time. If a revision is material, we will
+              provide at least 30 days' notice prior to any new terms taking
+              effect. What constitutes a material change will be determined at
+              our sole discretion.
+            </p>
+
+            <h2 class="TC-heading">9. Contact Us</h2>
+            <p>
+              If you have any questions about these Terms, please contact us at
+              [Your Contact Information].
+            </p>
           </div>
 
-          <div id="reports" class="d-none text-white">
+          <div id="reports" class="d-none text-dark">
             <h3>Reports</h3>
             <p>View reports and analytics here.</p>
           </div>
 
-          <div id="logout" class="d-none text-white">
+          <div id="logout" class="d-none text-dark">
+            <i class="fas fa-sign-out-alt logout-icon"></i>
             <h3>Logout</h3>
-            <p>You have been logged out.</p>
+            <p>
+              You are about to log out of your account. Please confirm your
+              action.
+            </p>
+            <p>
+              Thank you for using our application. We hope to see you again
+              soon!
+            </p>
+            <a href="#" class="btn btn-primary logout-btn">Logout</a>
           </div>
         </div>
       </div>
     </div>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="index.js"></script>
+    <script src="/js/index.js"></script>
+    <script>
+      function selectService(serviceName) {
+        document.getElementById("category-span").innerText = serviceName;
+      }
+    </script>
   </body>
 </html>
