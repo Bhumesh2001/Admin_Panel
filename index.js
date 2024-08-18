@@ -45,21 +45,23 @@ document.querySelector('.sidebar-link[data-target="#dashboard"]').click();
 document.getElementById('video-form').addEventListener('submit', async function (event) {
     event.preventDefault();
 
-    const videoFile = document.getElementById('videoUpload').files[0];
-    const videoUrl = document.getElementById('videoUrl').value;
-    const videoTitle = document.getElementById('videoTitle').value;
-    const videoDescription = document.getElementById('videoDescription').value;
-    const category = document.getElementById('videoCategory').value;
+    const videoTitle = document.getElementById('title').value;
+    const videoDescription = document.getElementById('description').value;
+    const category = document.getElementById('category').value;
+    const thumbnail = document.getElementById('thumbnail').value;
+    const videoUrl = document.getElementById('video-url').value;
+    const videoFile = document.getElementById('video').files[0];
 
-    if (videoFile) {
+    if (videoFile || videoUrl) {
         const formData = new FormData();
-        formData.append('videoUpload', videoFile);
-        formData.append('videoTitle', videoTitle);
-        formData.append('videoDescription', videoDescription);
-        formData.append('videoCategory', category);
-        formData.append('videoUrl',videoUrl);
+        formData.append('title', videoTitle);
+        formData.append('description', videoDescription);
+        formData.append('category', category);
+        formData.append('thumbnail', thumbnail);
+        formData.append('videoFile', videoFile);
+        formData.append('videoUrl', videoUrl);
         try {
-            const response = await fetch('http://localhost:3000/upload', {
+            const response = await fetch('http://localhost:3000/admin/upload-video', {
                 method: 'POST',
                 body: formData,
             });
