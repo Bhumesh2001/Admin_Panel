@@ -12,14 +12,16 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     />
-
-    <link rel="icon" href="/logo.jpg" type="image/x-icon" />
-    <link rel="stylesheet" href="/style.css" />
+    <link rel="icon" href="/logo/favicon_logo.jpg" type="image/x-icon" />
+    <link rel="stylesheet" href="/css/style.css" />
   </head>
   <body>
     <!-- Sidebar -->
     <div class="sidebar" id="sidebar">
-      <h2 class="text-admin">Admin Panel</h2>
+      <div class="navbar-brand mb-3">
+        <img src="/logo/logo_page.png" class="img-fluid" alt="Logo" />
+      </div>
+
       <a
         draggable="false"
         href="#"
@@ -125,7 +127,7 @@
           class="d-flex justify-content-center align-items-center"
         >
           <div id="dashboard" class="w-100">
-            <h3 class="text-dark mt-1 mb-3">Dashboard</h3>
+            <h3 class="mt-1 mb-3">Dashboard</h3>
             <div class="row">
               <div class="col-md-4 mb-3">
                 <div class="card dashboard-card">
@@ -226,251 +228,157 @@
             </div>
           </div>
 
-          <div id="upload-video" class="d-none text-dark upload-video my-3">
-            <h3>Upload Video</h3>
-            <form class="custom-form" id="video-form">
-              <div class="mb-3">
-                <label for="videoTitle" class="form-label">Title</label>
+          <div class="form-container m-4 d-none" id="upload-video">
+            <h2 class="text-center heading">Upload Video</h2>
+            <form id="video-form">
+              <div class="form-group mb-3">
+                <label for="title">Title</label>
                 <input
                   type="text"
                   class="form-control"
-                  id="videoTitle"
-                  aria-describedby="emailHelp"
-                  placeholder="Enter your title"
+                  id="title"
+                  name="title"
+                  placeholder="Enter video title"
                   required
-                  autocomplete="off"
                 />
               </div>
-              <div class="mb-3">
-                <label for="videoDescription" class="form-label"
-                  >Description</label
-                >
+
+              <div class="form-group mb-3">
+                <label for="description">Description</label>
                 <textarea
                   class="form-control"
-                  id="videoDescription"
+                  id="description"
+                  name="description"
+                  placeholder="Enter video description"
                   rows="3"
-                  placeholder="Enter description here..."
                   required
-                  autocomplete="off"
                 ></textarea>
               </div>
-              <div class="mb-3">
-                <label for="videoCategory" class="form-label"
-                  >Select Category</label
+
+              <div class="form-group mb-3">
+                <label for="category">Category</label>
+                <select
+                  class="form-control"
+                  id="category"
+                  name="category"
+                  required
                 >
-                <div class="dropdown">
-                  <button
-                    class="btn btn-outline-secondary dropdown-toggle custom-select"
-                    type="button"
-                    id="dropdownMenuButton"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                  >
-                    <span class="float-start" id="category-span"
-                      >Choose a category</span
-                    >
-                  </button>
-                  <ul
-                    class="dropdown-menu"
-                    aria-labelledby="dropdownMenuButton"
-                  >
-                    <li>
-                      <a
-                        class="dropdown-item"
-                        href="#"
-                        onclick="selectService('Aadhaar Service')"
-                        ><i class="fas fa-id-card"></i>Aadhaar Service</a
-                      >
-                    </li>
-                    <li>
-                      <a
-                        class="dropdown-item"
-                        href="#"
-                        onclick="selectService('PAN Card Service')"
-                        ><i class="fas fa-id-card-alt"></i>PAN Card Service</a
-                      >
-                    </li>
-                    <li>
-                      <a
-                        class="dropdown-item"
-                        href="#"
-                        onclick="selectService('Voter Card Service')"
-                        ><i class="fas fa-id-card"></i>Voter Card Service</a
-                      >
-                    </li>
-                    <li>
-                      <a
-                        class="dropdown-item"
-                        href="#"
-                        onclick="selectService('UP Pension')"
-                        ><i class="fas fa-user-graduate"></i>UP Pension</a
-                      >
-                    </li>
-                    <li>
-                      <a
-                        class="dropdown-item"
-                        href="#"
-                        onclick="selectService('PF (EPFO)')"
-                        ><i class="fas fa-building"></i>PF (EPFO)</a
-                      >
-                    </li>
-                    <li>
-                      <a
-                        class="dropdown-item"
-                        href="#"
-                        onclick="selectService('ITR Filing')"
-                        ><i class="fas fa-file-invoice"></i>ITR Filing</a
-                      >
-                    </li>
-                    <li>
-                      <a
-                        class="dropdown-item"
-                        href="#"
-                        onclick="selectService('Udyog Adhar (MSME)')"
-                        ><i class="fas fa-industry"></i>Udyog Adhar (MSME)</a
-                      >
-                    </li>
-                    <li>
-                      <a
-                        class="dropdown-item"
-                        href="#"
-                        onclick="selectService('PM Kisan Samman Nidhi')"
-                        ><i class="fas fa-hand-holding-usd"></i>PM Kisan Samman
-                        Nidhi</a
-                      >
-                    </li>
-                    <li>
-                      <a
-                        class="dropdown-item"
-                        href="#"
-                        onclick="selectService('DL Service')"
-                        ><i class="fas fa-car"></i>DL Service</a
-                      >
-                    </li>
-                    <li>
-                      <a
-                        class="dropdown-item"
-                        href="#"
-                        onclick="selectService('Parivahan Seva')"
-                        ><i class="fas fa-road"></i>Parivahan Seva</a
-                      >
-                    </li>
-                    <li>
-                      <a
-                        class="dropdown-item"
-                        href="#"
-                        onclick="selectService('UP Police Service')"
-                        ><i class="fas fa-shield-alt"></i>UP Police Service</a
-                      >
-                    </li>
-                    <li>
-                      <a
-                        class="dropdown-item"
-                        href="#"
-                        onclick="selectService('Passport Service')"
-                        ><i class="fas fa-passport"></i>Passport Service</a
-                      >
-                    </li>
-                    <li>
-                      <a
-                        class="dropdown-item"
-                        href="#"
-                        onclick="selectService('E District UP')"
-                        ><i class="fas fa-desktop"></i>E District UP</a
-                      >
-                    </li>
-                    <li>
-                      <a
-                        class="dropdown-item"
-                        href="#"
-                        onclick="selectService('CSC Service')"
-                        ><i class="fas fa-laptop"></i>CSC Service</a
-                      >
-                    </li>
-                    <li>
-                      <a
-                        class="dropdown-item"
-                        href="#"
-                        onclick="selectService('File Converter')"
-                        ><i class="fas fa-file-upload"></i>File Converter</a
-                      >
-                    </li>
-                    <li>
-                      <a
-                        class="dropdown-item"
-                        href="#"
-                        onclick="selectService('UP Labour Card Service')"
-                        ><i class="fas fa-user-tie"></i>UP Labour Card
-                        Service</a
-                      >
-                    </li>
-                    <li>
-                      <a
-                        class="dropdown-item"
-                        href="#"
-                        onclick="selectService('E Shram Card Service')"
-                        ><i class="fas fa-id-badge"></i>E Shram Card Service</a
-                      >
-                    </li>
-                    <li>
-                      <a
-                        class="dropdown-item"
-                        href="#"
-                        onclick="selectService('Photoshop')"
-                        ><i class="fas fa-image"></i>Photoshop</a
-                      >
-                    </li>
-                    <li>
-                      <a
-                        class="dropdown-item"
-                        href="#"
-                        onclick="selectService('MS Word')"
-                        ><i class="fas fa-file-word"></i>MS Word</a
-                      >
-                    </li>
-                    <li>
-                      <a
-                        class="dropdown-item"
-                        href="#"
-                        onclick="selectService('Excel')"
-                        ><i class="fas fa-file-excel"></i>Excel</a
-                      >
-                    </li>
-                  </ul>
+                  <option value="">Select category</option>
+                  <option data-icon="fas fa-id-card">Aadhaar Service</option>
+                  <option data-icon="fas fa-id-card-alt">
+                    PAN Card Service
+                  </option>
+                  <option data-icon="fas fa-voter-id">
+                    Voter Card Service
+                  </option>
+                  <option data-icon="fas fa-user-graduate">UP Pension</option>
+                  <option data-icon="fas fa-building">PF (EPFO)</option>
+                  <option data-icon="fas fa-file-invoice">ITR Filing</option>
+                  <option data-icon="fas fa-industry">
+                    Udyog Adhar (MSME)
+                  </option>
+                  <option data-icon="fas fa-hand-holding-usd">
+                    PM Kisan Samman Nidhi
+                  </option>
+                  <option data-icon="fas fa-car">DL Service</option>
+                  <option data-icon="fas fa-road">Parivahan Seva</option>
+                  <option data-icon="fas fa-shield-alt">
+                    UP Police Service
+                  </option>
+                  <option data-icon="fas fa-passport">Passport Service</option>
+                  <option data-icon="fas fa-desktop">E District UP</option>
+                  <option data-icon="fas fa-laptop">CSC Service</option>
+                  <option data-icon="fas fa-file-upload">File Converter</option>
+                  <option data-icon="fas fa-user-tie">
+                    UP Labour Card Service
+                  </option>
+                  <option data-icon="fas fa-id-badge">
+                    E Shram Card Service
+                  </option>
+                  <option data-icon="fas fa-image">Photoshop</option>
+                  <option data-icon="fas fa-file-word">MS Word</option>
+                  <option data-icon="fas fa-file-excel">Excel</option>
+                </select>
+              </div>
+
+              <div class="form-group mb-3">
+                <label for="thumbnail">Thumbnail</label>
+                <div class="custom-file">
+                  <input
+                    type="file"
+                    class="custom-file-input"
+                    id="thumbnail"
+                    name="thumbnail"
+                    accept="image/*"
+                  />
                 </div>
               </div>
-              <div class="mb-3">
-                <label for="videoUpload" class="form-label">Upload Video</label>
-                <input
-                  type="file"
-                  class="form-control"
-                  id="videoUpload"
-                  accept="video/*"
-                />
-                <small class="form-text"
-                  >Choose a video file or enter a video URL below.</small
-                >
+
+              <div class="form-group mb-3">
+                <label class="upload-label">Upload Method</label>
+                <div class="form-check form-check-inline">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="uploadMethod"
+                    id="uploadVideo"
+                    value="upload"
+                    checked
+                  />
+                  <label class="form-check-label radio-label" for="uploadVideo"
+                    >Upload Video</label
+                  >
+                </div>
+                <div class="form-check form-check-inline">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="uploadMethod"
+                    id="videoUrl"
+                    value="url"
+                  />
+                  <label class="form-check-label radio-label" for="videoUrl"
+                    >Video URL</label
+                  >
+                </div>
               </div>
-              <p class="or">Or</p>
-              <div class="mb-3">
-                <label for="videoUrl" class="form-label">Video URL</label>
+
+              <div class="form-group mb-3" id="videoUploadField">
+                <label for="video">Video File</label>
+                <div class="custom-file">
+                  <input
+                    type="file"
+                    class="custom-file-input"
+                    id="video"
+                    name="video"
+                    accept="video/*"
+                  />
+                </div>
+              </div>
+
+              <div class="form-group mb-3" id="videoUrlField">
+                <label for="video-url">Video URL</label>
                 <input
                   type="url"
                   class="form-control"
-                  id="videoUrl"
+                  id="video-url"
+                  name="video-url"
                   placeholder="Enter video URL"
                   autocomplete="off"
                 />
               </div>
-              <button type="submit" class="btn btn-primary video_btn">
-                Upload
-              </button>
+
+              <div class="form-group text-center">
+                <button type="submit" class="btn btn-danger">
+                  Upload Video
+                </button>
+              </div>
             </form>
           </div>
 
-          <div id="others-story" class="d-none text-dark article my-3">
+          <div id="others-story" class="d-none text-dark article m-4">
             <div class="card story-card">
-              <h3>Add New Article</h3>
+              <h2 class="heading">Add New Article</h2>
               <form>
                 <div class="mb-3">
                   <label for="articleTitle" class="form-label">Title</label>
@@ -526,13 +434,15 @@
                     accept="image/*"
                     required
                   />
-                  <small class="form-text text-muted"
+                  <small class="form-text"
                     >Upload an image related to the article.</small
                   >
                 </div>
-                <button type="submit" class="btn btn-primary">
-                  Add Article
-                </button>
+                <div class="text-center">
+                  <button type="submit" class="btn btn-danger text-center">
+                    Add Article
+                  </button>
+                </div>
               </form>
             </div>
           </div>
@@ -547,7 +457,7 @@
             <p>Configure your application settings here.</p>
           </div>
 
-          <div id="terms-conditions" class="d-none text-dark my-3">
+          <div id="terms-conditions" class="d-none m-4">
             <h1 class="m-heading">Terms and Conditions</h1>
             <p>
               Welcome to [Your Company Name]! These terms and conditions outline
@@ -652,7 +562,7 @@
             <p>View reports and analytics here.</p>
           </div>
 
-          <div id="logout" class="d-none text-dark">
+          <div id="logout" class="d-none">
             <i class="fas fa-sign-out-alt logout-icon"></i>
             <h3>Logout</h3>
             <p>
@@ -663,17 +573,42 @@
               Thank you for using our application. We hope to see you again
               soon!
             </p>
-            <a href="#" class="btn btn-primary logout-btn">Logout</a>
+            <a href="#" class="btn btn-danger logout-btn">Logout</a>
           </div>
         </div>
       </div>
     </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="/index.js"></script>
+    <script src="/js/index.js"></script>
     <script>
-      function selectService(serviceName) {
-        document.getElementById("category-span").innerText = serviceName;
-      }
+      // Custom file input label
+      document
+        .querySelector(".custom-file-input")
+        .addEventListener("change", function () {
+          const fileName = this.value.split("\\").pop();
+          this.nextElementSibling.classList.add("selected");
+          this.nextElementSibling.innerHTML = fileName;
+        });
+
+      // Toggle between upload video and video URL fields
+      const uploadMethodRadios = document.querySelectorAll(
+        'input[name="uploadMethod"]'
+      );
+      const videoUploadField = document.getElementById("videoUploadField");
+      const videoUrlField = document.getElementById("videoUrlField");
+
+      uploadMethodRadios.forEach((radio) => {
+        radio.addEventListener("change", function () {
+          if (document.getElementById("uploadVideo").checked) {
+            videoUploadField.style.display = "block";
+            videoUrlField.style.display = "none";
+          } else {
+            videoUploadField.style.display = "none";
+            videoUrlField.style.display = "block";
+          }
+        });
+      });
     </script>
   </body>
 </html>
